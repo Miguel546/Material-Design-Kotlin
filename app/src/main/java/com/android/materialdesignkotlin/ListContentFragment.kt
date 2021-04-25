@@ -13,11 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ListContentFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ListContentFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,9 +48,6 @@ class ListContentFragment : Fragment() {
         }
     }
 
-    /**
-     * Adapter to display recycler view.
-     */
     class ContentAdapter(context: Context) :
         RecyclerView.Adapter<ViewHolder>() {
         private val mPlaces: Array<String>
@@ -76,7 +68,6 @@ class ListContentFragment : Fragment() {
         }
 
         companion object {
-            // Set numbers of List in RecyclerView.
             private const val LENGTH = 18
         }
 

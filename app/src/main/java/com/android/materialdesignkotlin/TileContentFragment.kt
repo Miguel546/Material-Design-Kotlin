@@ -13,16 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TileContentFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TileContentFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +24,6 @@ class TileContentFragment : Fragment() {
         val adapter = ContentAdapter(recyclerView.context)
         recyclerView.adapter = adapter
         recyclerView.setHasFixedSize(true)
-        // Set padding for Tiles
         val tilePadding = resources.getDimensionPixelSize(R.dimen.tile_padding)
         recyclerView.setPadding(tilePadding, tilePadding, tilePadding, tilePadding)
         recyclerView.layoutManager = GridLayoutManager(activity, 2)
@@ -59,9 +48,6 @@ class TileContentFragment : Fragment() {
         }
     }
 
-    /**
-     * Adapter to display recycler view.
-     */
     class ContentAdapter(context: Context) :
         RecyclerView.Adapter<ViewHolder>() {
         private val mPlaces: Array<String>
@@ -80,7 +66,6 @@ class TileContentFragment : Fragment() {
         }
 
         companion object {
-            // Set numbers of List in RecyclerView.
             private const val LENGTH = 18
         }
 

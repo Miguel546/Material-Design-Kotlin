@@ -1,9 +1,11 @@
 package com.android.materialdesignkotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
@@ -14,6 +16,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import androidx.viewpager.widget.ViewPager
+import androidx.viewpager.widget.ViewPager.SimpleOnPageChangeListener
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -40,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             findViewById<View>(R.id.nav_view) as NavigationView
         mDrawerLayout = findViewById<View>(R.id.drawer) as DrawerLayout
 
+
         val supportActionBar = supportActionBar
         if (supportActionBar != null) {
             val indicator =
@@ -65,14 +69,28 @@ class MainActivity : AppCompatActivity() {
                 tabs.getTabAt(2)
             }
             transaction.commit()
-            // TODO: handle navigation
 
-            // Closing drawer on item click
             mDrawerLayout!!.closeDrawers()
             true
         }
-        // Adding Floating Action Button to bottom right of main view
-        // Adding Floating Action Button to bottom right of main view
+
+        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {}
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+
+            override fun onPageSelected(position: Int) {
+                if(viewPager.currentItem == 0){
+                    navigationView.menu.getItem(0).setChecked(true)
+                }else if(viewPager.currentItem == 1){
+                    navigationView.menu.getItem(1).setChecked(true)
+                }else if(viewPager.currentItem == 2){
+                    navigationView.menu.getItem(2).setChecked(true)
+                }
+
+            }
+        })
+
+        navigationView.menu.getItem(0).setChecked(true)
         val fab =
             findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { v ->
@@ -121,7 +139,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
@@ -129,10 +146,21 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.action_settings) {
+            Toast.makeText(applicationContext, "Click en compartir", Toast.LENGTH_SHORT).show()
+            val intent = Intent()
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, "Gracias por descargar esta aplicación")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Mail enviado desde mi app")
+            intent.action = Intent.ACTION_SEND
+            val chooseIntent = Intent.createChooser(intent, "Elija una opcion")
+            startActivity(chooseIntent)
             return true
         } else if (id == android.R.id.home) {
             mDrawerLayout!!.openDrawer(GravityCompat.START)
         }
+
         return super.onOptionsItemSelected(item)
     }
+
+
 }

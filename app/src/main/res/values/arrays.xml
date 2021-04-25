@@ -16,74 +16,43 @@
   -->
 <resources>
     <string-array name="places">
-        <item>Palais Garnie</item>
-        <item>Piazza del Duomo</item>
-        <item>Manhattan</item>
-        <item>Senso-ji</item>
-        <item>Sultan Ahmed Mosque</item>
-        <item>Table Mountain</item>
+        <item>Costa Amalfitana</item>
+        <item>Machu Picchu</item>
+        <item>Castillo de Neuschwanstein</item>
+        <item>Taj Mahal</item>
+        <item>Salar de Uyuni</item>
+        <item>Fiordo de Geirangerfjord</item>
     </string-array>
     <string-array name="place_desc">
-        <item>The Palais Garnier which locates in Paris was built from 1861 for
-        the Paris Opera.
+        <item>Italia es uno de los lugares más bonitos del mundo a los que viajar, y todo el país guarda rincones hermosos, pueblos con mucha historia y paisajes espléndidos. Uno de los lugares más bellos de este país para visitar es la Costa Amalfitana.
         </item>
-        <item>Piazza del Duomo the cathedral which locates in Florence.</item>
-        <item>Manhattan is the district in New York City</item>
-        <item>Senso-ji is the Shrine locates in Asakusa Tokyo</item>
-        <item>Sultan Ahmed Mosque is mosque locates in Istabul, Turkey</item>
-        <item>Table Mountain is mountain and park locates in Cape Town, South Africa.</item>
+        <item>Estas antiguas ruinas incas en Perú son otro de los lugares más bonitos del mundo para visitar, y de hecho están consideradas una de las siete maravillas del mundo moderno.</item>
+        <item>Otro de los 15 lugares más preciosos del mundo parece sacado de un cuento de hadas, y de hecho, ha servido de inspiración para algunos de los castillos más emblemáticos de Disney.</item>
+        <item>Uno de los edificios más emblemáticos del mundo es la impresionante construcción del Taj Mahal, considerado Patrimonio de la Humanidad por la UNESCO.</item>
+        <item>El salar de Uyuni es un desierto de sal que se encuentra en Bolivia, y que ocupa una extensión de más de 10.000 km².</item>
+        <item>El deshielo esculpió maravillas de la naturaleza como estas.</item>
     </string-array>
     <string-array name="place_details">
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>Esta zona situada en el golfo de Salerno destaca por los pueblos coloridos y con encanto que salpican los acantilados de este tramo costero. Su curiosa posición deja unas vistas al mar espectaculares, que ofrecen un panorama digno de ser visitado y lo convierten en uno de los lugares más bonitos del mundo.
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>Esta impresionante obra de la arquitectura se encuentra emplazada sobre terrazas en lo alto de una colina a más de 2490 metros de altitud, y está considerada una de las obras más sorprendentes de la ingeniería. Las vistas de las montañas que rodean esta antigua ciudad dejan sin aliento a sus visitantes.
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>El rey Luis II de Baviera, también conocido como rey loco, mandó construir este impresionante castillo en lo alto de un desfiladero. Su posición y su característica arquitectura romántica lo convierten en uno de los lugares más bonitos del mundo.
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>Este mausoleo hecho de mármol blanco honra a la esposa fallecida del emperador mongol Shah Jahan, y es uno de los lugares más bonitos del mundo, tanto por la belleza del edificio como por la hermosa estampa que presenta junto a los jardines.
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>Es el salar continuo más extenso y alto del mundo, convirtiéndolo en un lugar único en el que cielo y tierra parecen unirse. Cuando el salar se encuentra cubierto de agua, crea un efecto espejo y refleja las nubes, formando un paisaje tan curioso como espectacular.
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>Este espectacular fiordo destaca por su profundidad y su increíble formación, ya que ha sido moldeado entre impresionantes montañas cubiertas de frondosa vegetación y con bellas cascadas que descienden por ellas. Fue declarado Patrimonio de la Humanidad por la UNESCO en 2005.
         </item>
     </string-array>
     <string-array name="place_locations">
-        <item>8 Rue Scribe, 75009 Paris, France</item>
-        <item>Piazza del Capitolo - 50122 Florence</item>
-        <item>New York City</item>
-        <item>2-3-1 Asakusa, Taitō-ku, Tokyo, Japan</item>
-        <item>At Meydanı No:7, 34122 Fatih/İstanbul, Turkey</item>
-        <item>Cape Town, South Africa</item>
+        <item>Italia</item>
+        <item>Perú</item>
+        <item>Alemania</item>
+        <item>India</item>
+        <item>Bolivia</item>
+        <item>Noruega</item>
     </string-array>
     <array name="place_avator">
         <item>@drawable/a_avator</item>

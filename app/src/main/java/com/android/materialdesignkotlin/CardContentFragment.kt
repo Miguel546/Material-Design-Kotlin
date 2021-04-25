@@ -16,16 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CardContentFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CardContentFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +49,6 @@ class CardContentFragment : Fragment() {
                 context.startActivity(intent)
             }
 
-            // Adding Snackbar to Action Button inside card
             val button =
                 itemView.findViewById<View>(R.id.action_button) as Button
             button.setOnClickListener { v ->
@@ -87,9 +76,6 @@ class CardContentFragment : Fragment() {
         }
     }
 
-    /**
-     * Adapter to display recycler view.
-     */
     class ContentAdapter(context: Context) :
         RecyclerView.Adapter<ViewHolder>() {
         private val mPlaces: Array<String>
@@ -110,7 +96,6 @@ class CardContentFragment : Fragment() {
         }
 
         companion object {
-            // Set numbers of Card in RecyclerView.
             private const val LENGTH = 18
         }
 
