@@ -1,6 +1,7 @@
 package com.android.materialdesignkotlin
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -16,7 +17,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager.widget.ViewPager.SimpleOnPageChangeListener
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -76,14 +76,19 @@ class MainActivity : AppCompatActivity() {
 
         viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {}
-            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+            }
 
             override fun onPageSelected(position: Int) {
-                if(viewPager.currentItem == 0){
+                if (viewPager.currentItem == 0) {
                     navigationView.menu.getItem(0).setChecked(true)
-                }else if(viewPager.currentItem == 1){
+                } else if (viewPager.currentItem == 1) {
                     navigationView.menu.getItem(1).setChecked(true)
-                }else if(viewPager.currentItem == 2){
+                } else if (viewPager.currentItem == 2) {
                     navigationView.menu.getItem(2).setChecked(true)
                 }
 
@@ -146,15 +151,19 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.action_settings) {
-            Toast.makeText(applicationContext, "Click en compartir", Toast.LENGTH_SHORT).show()
             val intent = Intent()
             intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_TEXT, "Gracias por descargar esta aplicación")
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Mail enviado desde mi app")
+            intent.putExtra(Intent.EXTRA_TEXT, "Gracias por descargar esta aplicación te invito a compartirla")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Mai enviado desde mi ")
             intent.action = Intent.ACTION_SEND
             val chooseIntent = Intent.createChooser(intent, "Elija una opcion")
             startActivity(chooseIntent)
             return true
+        }else if(id  == R.id.action_github){
+            val url = "https://github.com/Miguel546/Material-Design-Kotlin"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
         } else if (id == android.R.id.home) {
             mDrawerLayout!!.openDrawer(GravityCompat.START)
         }
