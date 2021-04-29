@@ -153,8 +153,8 @@ class MainActivity : AppCompatActivity() {
         if (id == R.id.action_settings) {
             val intent = Intent()
             intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_TEXT, "Gracias por descargar esta aplicación te invito a compartirla")
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Mai enviado desde mi ")
+            intent.putExtra(Intent.EXTRA_TEXT, "Gracias por descargar esta aplicación te invito a compartirla https://play.google.com/store/apps/details?id=com.luismiguel.lugares")
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Compartir aplicación")
             intent.action = Intent.ACTION_SEND
             val chooseIntent = Intent.createChooser(intent, "Elija una opcion")
             startActivity(chooseIntent)
